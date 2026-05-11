@@ -188,20 +188,24 @@ def enqueue_songs(api: SubsonicConnection, queue: MediaQueue, song_id_list: list
         song_uri = api.get_song_uri(song_id)
 
         # Create track object from song details
-        new_track = Track(song_details.get('song').get('id'),
-                          song_details.get('song').get('title'),
-                          song_details.get('song').get('artist'),
-                          song_details.get('song').get('artistId'),
-                          song_details.get('song').get('album'),
-                          song_details.get('song').get('albumId'),
-                          song_details.get('song').get('track'),
-                          song_details.get('song').get('year'),
-                          song_details.get('song').get('genre'),
-                          song_details.get('song').get('duration'),
-                          song_details.get('song').get('bitRate'),
-                          song_uri,
-                          0,
-                          None)
+        song = song_details.get('song') or song_details
+
+        new_track = Track(
+            song.get('id'),
+            song.get('title'),
+            song.get('artist'),
+            song.get('artistId'),
+            song.get('album'),
+            song.get('albumId'),
+            song.get('track', 0),
+            song.get('year', 0),
+            song.get('genre', ''),
+            song.get('duration', 0),
+            song.get('bitRate', 0),
+            song_uri,
+            0,
+            None
+        )
 
         # Add track object to queue
         queue.add_track(new_track)
