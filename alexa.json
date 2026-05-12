@@ -1,215 +1,252 @@
 {
-    "interactionModel": {
-        "languageModel": {
-            "invocationName": "navisonic",
-            "intents": [
-                {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.StopIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.PauseIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.ResumeIntent",
-                    "samples": []
-                },
-                {
-                    "name": "NaviSonicPlayMusicByArtist",
-                    "slots": [
-                        {
-                            "name": "artist",
-                            "type": "AMAZON.Artist"
-                        }
-                    ],
-                    "samples": [
-                        "play songs by {artist}",
-                        "play music by {artist}"
-                    ]
-                },
-                {
-                    "name": "AMAZON.NextIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.PreviousIntent",
-                    "samples": []
-                },
-                {
-                    "name": "NaviSonicPlayAlbumByArtist",
-                    "slots": [
-                        {
-                            "name": "album",
-                            "type": "AMAZON.MusicAlbum"
-                        },
-                        {
-                            "name": "artist",
-                            "type": "AMAZON.Artist"
-                        }
-                    ],
-                    "samples": [
-                        "Play the album {album}",
-                        "Play the album {album} by {artist}"
-                    ]
-                },
-                {
-                    "name": "NaviSonicPlayPlaylist",
-                    "slots": [
-                        {
-                            "name": "playlist",
-                            "type": "playlist_names"
-                        }
-                    ],
-                    "samples": [
-                        "Play the {playlist} playlist",
-                        "Start the {playlist} playlist"
-                    ]
-                },
-                {
-                    "name": "NaviSonicSongDetails",
-                    "slots": [],
-                    "samples": [
-                        "What is playing",
-                        "Who is singing",
-                        "Who's singing",
-                        "What album is this song on",
-                        "What album is this on",
-                        "Which album",
-                        "Which album is this song from",
-                        "Which artist is this",
-                        "What band is this",
-                        "Who sings this song",
-                        "Who sings this",
-                        "What song is this",
-                        "What's playing"
-                    ]
-                },
-                {
-                    "name": "NaviSonicStarSong",
-                    "slots": [],
-                    "samples": [
-                        "Add this song to my favourites",
-                        "Favourite this song",
-                        "Like this song",
-                        "Add this song to my liked songs",
-                        "Star this song"
-                    ]
-                },
-                {
-                    "name": "NaviSonicUnstarSong",
-                    "slots": [],
-                    "samples": [
-                        "Remove this song from favourites",
-                        "I don't like this song",
-                        "Remove the star from this song",
-                        "Delete this song from my favourites",
-                        "Unstar this song"
-                    ]
-                },
-                {
-                    "name": "NaviSonicPlaySongByArtist",
-                    "slots": [
-                        {
-                            "name": "song",
-                            "type": "AMAZON.MusicRecording"
-                        },
-                        {
-                            "name": "artist",
-                            "type": "AMAZON.Artist"
-                        }
-                    ],
-                    "samples": [
-                        "Play the song {song} by the band {artist}",
-                        "Play {song} by the band {artist}",
-                        "Play {song} by {artist}",
-                        "Play the song {song} by the artist {artist}"
-                    ]
-                },
-                {
-                    "name": "NaviSonicPlayFavouriteSongs",
-                    "slots": [],
-                    "samples": [
-                        "Play my starred tracks",
-                        "Play starred tracks",
-                        "Play starred songs",
-                        "Play my starred songs",
-                        "Play my favourite songs"
-                    ]
-                },
-                {
-                    "name": "NaviSonicPlayMusicByGenre",
-                    "slots": [
-                        {
-                            "name": "genre",
-                            "type": "AMAZON.Genre"
-                        }
-                    ],
-                    "samples": [
-                        "Play {genre} songs",
-                        "Play {genre} music"
-                    ]
-                },
-                {
-                    "name": "NaviSonicPlayMusicRandom",
-                    "slots": [],
-                    "samples": [
-                        "Play a selection of music",
-                        "Play a mix of tracks",
-                        "Play a mix of songs",
-                        "Play random music",
-                        "Play random songs"
-                    ]
-                },
-                {
-                    "name": "NaviSonicRandomiseQueue",
-                    "slots": [],
-                    "samples": [
-                        "randomise the queue",
-                        "randomise",
-                        "shuffle",
-                        "shuffle the queue"
-                    ]
-                }
-            ],
-            "types": [
-                {
-                    "name": "playlist_names",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "Background Music"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Rock Songs"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Work Music"
-                            }
-                        }
-                    ]
-                }
-            ]
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "navi drome",
+      "intents": [
+        {
+          "name": "PlayArtistIntent",
+          "slots": [
+            {
+              "name": "artist",
+              "type": "AMAZON.Artist"
+            }
+          ],
+          "samples": [
+            "play artist {artist}",
+            "play music by {artist}",
+            "play songs by {artist}",
+            "start artist {artist}",
+            "listen to {artist}",
+            "play {artist}"
+          ]
+        },
+        {
+          "name": "PlayAlbumIntent",
+          "slots": [
+            {
+              "name": "album",
+              "type": "AMAZON.MusicAlbum"
+            }
+          ],
+          "samples": [
+            "play album {album}",
+            "play the album {album}",
+            "start album {album}",
+            "listen to album {album}"
+          ]
+        },
+        {
+          "name": "PlaySongIntent",
+          "slots": [
+            {
+              "name": "song",
+              "type": "AMAZON.MusicRecording"
+            }
+          ],
+          "samples": [
+            "play song {song}",
+            "play the song {song}",
+            "start song {song}",
+            "listen to {song}"
+          ]
+        },
+        {
+          "name": "PlayPlaylistIntent",
+          "slots": [
+            {
+              "name": "playlist",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "play playlist {playlist}",
+            "play the playlist {playlist}",
+            "start playlist {playlist}",
+            "shuffle playlist {playlist}",
+            "shuffle the playlist {playlist}",
+            "listen to playlist {playlist}"
+          ]
+        },
+        {
+          "name": "ShuffleIntent",
+          "slots": [
+            {
+              "name": "target",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "shuffle",
+            "shuffle music",
+            "shuffle my music",
+            "shuffle songs",
+            "shuffle playlist",
+            "shuffle playlist {target}",
+            "shuffle the playlist {target}",
+            "shuffle {target}"
+          ]
+        },
+        {
+          "name": "NowPlayingIntent",
+          "slots": [],
+          "samples": [
+            "what is playing",
+            "what's playing",
+            "what song is this",
+            "now playing",
+            "current song",
+            "tell me what is playing"
+          ]
+        },
+        {
+          "name": "QueueIntent",
+          "slots": [],
+          "samples": [
+            "what is in the queue",
+            "show queue",
+            "queue",
+            "what is queued",
+            "what is coming next",
+            "what plays next"
+          ]
+        },
+        {
+          "name": "ClearQueueIntent",
+          "slots": [],
+          "samples": [
+            "clear queue",
+            "clear the queue",
+            "empty queue",
+            "empty the queue",
+            "remove queue",
+            "remove the queue"
+          ]
+        },
+        {
+          "name": "RepeatIntent",
+          "slots": [],
+          "samples": [
+            "repeat",
+            "repeat this song",
+            "repeat track",
+            "repeat current song",
+            "turn on repeat",
+            "enable repeat"
+          ]
+        },
+        {
+          "name": "StopPlaybackIntent",
+          "slots": [],
+          "samples": [
+            "stop music",
+            "stop playback",
+            "stop playing",
+            "stop",
+            "turn off music",
+            "end playback"
+          ]
+        },
+        {
+          "name": "PausePlaybackIntent",
+          "slots": [],
+          "samples": [
+            "pause music",
+            "pause playback",
+            "pause",
+            "pause playing"
+          ]
+        },
+        {
+          "name": "ResumePlaybackIntent",
+          "slots": [],
+          "samples": [
+            "resume music",
+            "resume playback",
+            "resume",
+            "continue",
+            "continue playing",
+            "start playing again"
+          ]
+        },
+        {
+          "name": "NextTrackIntent",
+          "slots": [],
+          "samples": [
+            "next",
+            "next song",
+            "next track",
+            "skip",
+            "skip song",
+            "skip track"
+          ]
+        },
+        {
+          "name": "PreviousTrackIntent",
+          "slots": [],
+          "samples": [
+            "previous",
+            "previous song",
+            "previous track",
+            "back",
+            "go back",
+            "last song",
+            "last track"
+          ]
+        },
+        {
+          "name": "StartOverIntent",
+          "slots": [],
+          "samples": [
+            "start over",
+            "restart song",
+            "restart track",
+            "play from beginning",
+            "start this song over"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help",
+            "what can I say",
+            "how do I use this",
+            "what commands can I use"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
         }
+      ],
+      "types": []
     }
+  }
 }
